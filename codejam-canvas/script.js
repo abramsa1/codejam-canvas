@@ -1,4 +1,24 @@
 
+function getArr(scale) {
+    let url = '';
+    if (scale == '4') {
+        url = 'https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/stage-2/codejam-canvas/data/4x4.json';
+    } else if (scale == '32') {
+        url = 'https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/stage-2/codejam-canvas/data/32x32.json';
+    } else {
+        let img = document.createElement('img');
+        img.crossOrigin = "Anonymous";
+        img.src = 'https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/stage-2/codejam-canvas/data/image.png';
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            return;
+        }
+    }
+    fetch(url)
+        .then(res => res.json())
+        .then(data => drawPixel(data, scale));
+}
+
 function drawPixel(color, scale) {
     let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     for (let i = 0, k = 0; i < color.length; i++) {
