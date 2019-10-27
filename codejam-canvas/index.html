@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Codejam - Canvas</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-left-wrap">
+            <div class="menu-left">
+                <div class="menu-left__rect"></div>
+            </div>
+            <h1 class="title">CodeJam - Pallete</h1>
+        </div>
+        <div class="menu-right">
+            <div class="menu-right__circle"></div>
+        </div>
+    </header>
+
+    <div class="main-wrap">
+        <aside class="toolbar">
+            <div class="tool-widget">
+                <ul class="first-tool-list">
+                    <li class="list-item first-tool-list__item--one">Paint bucket</li>
+                    <li class="list-item first-tool-list__item--two">Choose color</li>
+                </ul>
+                <ul class="second-tool-list">
+                    <li class="list-item second-tool-list__item--one">Move</li>
+                    <li class="list-item second-tool-list__item--two">Transform</li>
+                </ul>
+            </div>
+            <div class="tool-widget">
+                <ul class="first-tool-list">
+                    <li class="list-item first-tool-list__item--one color__item first-color__item--one">Current color
+                    </li>
+                    <li class="list-item second-tool-list__item--two color__item first-color__item--two">Prev color</li>
+                </ul>
+                <ul class="second-tool-list">
+                    <li class="list-item first-tool-list__item--one color__item second-color__item--one">red</li>
+                    <li class="list-item second-tool-list__item--two color__item second-color__item--two">blue</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="paint-wrap">
+            <canvas id="canvas" class="canvas-plot" height="512" width="512"></canvas>
+        </main>
+
+        <aside class="scale-widget">
+            <div class="tool-widget">
+                <form id="scale-form" class="first-tool-list scale-form">
+                    <div class="radio-item">
+                        <input id="small" name="size" type="radio" value="4" class="radio-item__input">
+                        <label for="small" class="radio-item__label">4x4</label>
+                    </div>
+                    <div class="radio-item">
+                        <input id="middle" name="size" type="radio" value="32" class="radio-item__input">
+                        <label for="middle" class="radio-item__label">32x32</label>
+                    </div>
+                    <div class="radio-item">
+                        <input id="big" name="size" type="radio" value="256" class="radio-item__input">
+                        <label for="big" class="radio-item__label">256x256</label>
+                    </div>
+                </form>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>
