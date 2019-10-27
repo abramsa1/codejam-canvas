@@ -1,3 +1,12 @@
+const canvas = document.querySelector('#canvas');
+const ctx = canvas.getContext('2d');
+let inputs = document.querySelectorAll('input[name="size"]');
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('change', function () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        getArr(this.value);
+    });
+}
 
 function getArr(scale) {
     let url = '';
