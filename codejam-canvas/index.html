@@ -48,7 +48,28 @@
             </div>
         </aside>
 
+        <main class="paint-wrap">
+            <canvas id="canvas" class="canvas-plot" height="512" width="512"></canvas>
+        </main>
 
+        <aside class="scale-widget">
+            <div class="tool-widget">
+                <form id="scale-form" class="first-tool-list scale-form">
+                    <div class="radio-item">
+                        <input id="small" name="size" type="radio" value="4" class="radio-item__input">
+                        <label for="small" class="radio-item__label">4x4</label>
+                    </div>
+                    <div class="radio-item">
+                        <input id="middle" name="size" type="radio" value="32" class="radio-item__input">
+                        <label for="middle" class="radio-item__label">32x32</label>
+                    </div>
+                    <div class="radio-item">
+                        <input id="big" name="size" type="radio" value="256" class="radio-item__input">
+                        <label for="big" class="radio-item__label">256x256</label>
+                    </div>
+                </form>
+            </div>
+        </aside>
     </div>
     <script src="./script.js"></script>
 </body>
